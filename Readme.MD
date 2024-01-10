@@ -1,1 +1,1 @@
-# This is neamul haqs problems solutions, follow for get day by day solutions.
+# This is neamul haqs cp topics codes, follow for more to get day by day.
