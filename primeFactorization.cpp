@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 #include <iostream>
-#define MAX 32000
+#define MAX 1000000
 
 using namespace std;
 
@@ -46,6 +46,7 @@ int main() {
         int n;
     cin >> n;
     primeFactorize(n);
+    cout<< primes.size();
     for(auto u:List){
         cout << u << " ";
     }
