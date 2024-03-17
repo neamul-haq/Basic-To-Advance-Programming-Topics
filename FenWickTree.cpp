@@ -60,7 +60,43 @@ struct FenwickTreeMin {
     }
 };
 
-int main(){
-
+int main() {
+    // Your cpp code here
+    ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);
+    int t; cin >> t;
+    for(int i=1; i<=t; i++){
+        cout << "Case " << i << ":\n";
+        int n,q;
+        cin >> n>>q;
+        vector<int>a(n);
+        FenwickTree ft(n+1);
+        for(int i=0; i<n; i++){
+            cin >> a[i];
+            ft.add(i,a[i]);
+        }
+        while(q--){
+            int typ;
+            cin >> typ;
+            if(typ==1){
+                int idx; cin >>idx;
+                cout << a[idx] << endl;
+                ft.add(idx,-a[idx]);
+                a[idx]=0;
+            }
+            else if(typ==2){
+                int idx,v;
+                cin >> idx >> v;
+                a[idx]+=v;
+                ft.add(idx,v);
+            }
+            else{
+                int i,j;
+                cin >> i >>j;
+                cout << ft.sum(i,j) << endl;
+            }
+        }
+    }
+    return 0;
 }
+
 
